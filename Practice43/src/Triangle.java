@@ -1,0 +1,57 @@
+
+public class Triangle extends Shape {
+	private int base;
+	private int height;
+	
+	public void setBase(int base) {
+		this.base = base;
+	}
+	
+	public int getBase() {
+		return base;
+	}
+	
+	public void setHeight(int height) {
+		this.height = height;
+	}
+	
+	public int getHeight() {
+		return height;
+	}
+	
+	public Triangle(int base, int height) {
+		this.base = base;
+		this.height = height;
+	}
+	
+	public Triangle(int base) {
+		this(base, 0);
+	}
+	
+	public Triangle() {
+		this(0, 0);
+	}
+	
+	public double calcArea() {
+		double area;
+		
+		area = base * height;
+		
+		return area;
+	}
+	
+	public String toString() {
+		String rslt = super.toString();
+		
+		rslt += ", ¹Øº¯: " + base + ", ³ôÀÌ: " + height + ", ¸éÀû: " + this.calcArea();
+		
+		return rslt;
+	}
+	
+	public void draw() {
+		System.out.println("\n»ï°¢Çü, " + this.toString());
+		this.move();
+		System.out.println("-- ÀÌµ¿ ÈÄ --");
+		System.out.println("»ï°¢Çü, " + this.toString());
+	}
+}
